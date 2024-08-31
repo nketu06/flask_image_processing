@@ -70,10 +70,10 @@ This Flask application allows you to upload a CSV file containing image URLs, pr
 2. **Status Endpoint - /status/<request_id> (GET)**
     - Checks the processing status of a request.
 
-    -Parameters:
+    - Parameters:
     request_id (required): The unique ID returned from the upload endpoint.
 
-    -Response:
+    - Response:
     200 OK: Returns the status and results of the processing request.
     404 Not Found: If the request_id is invalid.
 
@@ -86,6 +86,10 @@ This Flask application allows you to upload a CSV file containing image URLs, pr
 
     - Response:
     200 OK: Acknowledges receipt of the webhook data.
+
+## Notes
+Ensure the CSV file uses commas to separate image URLs within a single column.
+Modify the MongoDB connection string in the code if your MongoDB instance is not running on the default port or host.
 
 
 
