@@ -20,15 +20,14 @@ This Flask application allows you to upload a CSV file containing image URLs, pr
 ## Installation
 
 1. **Clone the Repository**:
+   1. git clone https://github.com/nketu06/flask_image_processing.git
+   2. cd flask_image_processing
 
-   git clone https://github.com/nketu06/flask_image_processing.git
-   cd flask_image_processing
+2. **Create a Virtual Environment:**  
+    1. python -m venv venv
+    2. source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-2. **Create a Virtual Environment:**:  
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-
-3. **pip install -r requirements.txt**:  
+3. **pip install -r requirements.txt:**  
     pip install -r requirements.txt
 
 4. **Start MongoDB**:
@@ -36,7 +35,7 @@ This Flask application allows you to upload a CSV file containing image URLs, pr
 
 ## How to use
 
-1. **Start the Flask Application**
+1. **Start the Flask Application:**  
     python3 app.py or python app.py
 
 2. **Upload a CSV File**
