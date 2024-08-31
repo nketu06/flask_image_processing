@@ -96,7 +96,6 @@ def process_images(request_id, product_data, webhook_url=None):
         {'$set': {'status': 'Completed', 'output_csv': f"{OUTPUT_CSV_DIR}/output_{request_id}.csv"}},
         upsert=True
     )
-
     if webhook_url:
         trigger_webhook(webhook_url, request_id)
 
@@ -114,7 +113,7 @@ def create_output_csv(request_id, input_output_mapping):
 
     print(f"Output CSV created at: {output_csv_path}")
 
-# it trigger the webhook
+# function trigger the webhook
 def trigger_webhook(webhook_url, request_id):
     # Fetch the request details to include in the webhook payload
     request_status = requests_collection.find_one({'request_id': request_id}, {'_id': 0})
@@ -174,7 +173,6 @@ def upload_csv():
 def webhook_receiver():
     data = request.json
     print("Webhook received:", data)
-    # You can add logic to process the webhook data as needed
     return jsonify({'status': 'Webhook received', 'data': data}), 200
 
 # Status API: Check the processing status using the request ID.

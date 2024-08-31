@@ -1,4 +1,4 @@
 .venv
 venv
-processed_images
-output_csv
+# processed_images
+# output_csv

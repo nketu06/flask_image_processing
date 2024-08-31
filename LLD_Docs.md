@@ -41,7 +41,7 @@ This document provides the low-level design details of the image processing appl
   - **Task Flow**:
     1. Read image URLs from the CSV.
     2. Compress each image.
-    3. Store results and update statuses in MongoDB.
+    3. Store results and update status in MongoDB.
     4. Notify via webhook upon completion.
 
 ### 3.4 Webhook
